@@ -1,0 +1,14 @@
+<h1>Registration</h1>
+
+<% @people.each do |person| %>
+<%= person.name %>
+<h3>Pet info:</h3>
+  <% person.pets.each do |pet| %>
+  <ul>
+    <li><%= pet.name %></li>
+    <li><%= pet.breed %></li>
+  </ul>
+  <% end %>
+<% end %>
+
+<button><%= link_to "Register", new_person_path %></button>
